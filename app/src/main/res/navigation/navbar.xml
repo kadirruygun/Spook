@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navbar"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.proje.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_firstPageFragment"
+            app:destination="@id/firstPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstPageFragment"
+        android:name="com.example.proje.FirstPageFragment"
+        android:label="fragment_first_page"
+        tools:layout="@layout/fragment_first_page" >
+        <action
+            android:id="@+id/action_firstPageFragment_to_secondPageFragment"
+            app:destination="@id/secondPageFragment" />
+        <action
+            android:id="@+id/action_firstPageFragment_to_futbolFragment"
+            app:destination="@id/futbolFragment" />
+        <action
+            android:id="@+id/action_firstPageFragment_to_thirdPageFragment"
+            app:destination="@id/thirdPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondPageFragment"
+        android:name="com.example.proje.SecondPageFragment"
+        android:label="fragment_second_page"
+        tools:layout="@layout/fragment_second_page" >
+        <action
+            android:id="@+id/action_secondPageFragment_to_onay"
+            app:destination="@id/onay" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdPageFragment"
+        android:name="com.example.proje.ThirdPageFragment"
+        android:label="fragment_third_page"
+        tools:layout="@layout/fragment_third_page" >
+        <action
+            android:id="@+id/action_thirdPageFragment_to_onay"
+            app:destination="@id/onay" />
+    </fragment>
+    <fragment
+        android:id="@+id/futbolFragment"
+        android:name="com.example.proje.FutbolFragment"
+        android:label="fragment_futbol"
+        tools:layout="@layout/fragment_futbol" >
+        <action
+            android:id="@+id/action_futbolFragment_to_onay"
+            app:destination="@id/onay" />
+    </fragment>
+    <fragment
+        android:id="@+id/onay"
+        android:name="com.example.proje.onay"
+        android:label="fragment_onay"
+        tools:layout="@layout/fragment_onay" />
+</navigation>
